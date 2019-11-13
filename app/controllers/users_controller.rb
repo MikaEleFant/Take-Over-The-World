@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       sign_in!(@user)
       redirect_to user_url(@user)
     else
-      flash.now[:errors] = @user.errors.full_messages
+      flash.now[:errors] = @user.errors.full_messages, status: 401
       render :new
     end
   end
