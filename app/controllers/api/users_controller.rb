@@ -1,12 +1,11 @@
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
       sign_in!(@user)
-      redirect_to user_url(@user)
+      render :show
     else
       flash.now[:errors] = @user.errors.full_messages, status: 401
-      render :show
     end
   end
 
