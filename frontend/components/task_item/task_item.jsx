@@ -27,11 +27,7 @@ class TaskItem extends React.Component {
     const openEditForm = this.state.openEditForm;
     const task = this.props.task;
 
-    // Case 1:  Current task is the task with open form
-    // selected should be true
-    // openEditForm should be true
     if (closeTaskFormIds[0] === task.id && closeTaskFormIds.length > 1) {
-      // Deselect task and close edit form
       this.setState({
         selected: false,
         openEditForm: false
@@ -40,28 +36,19 @@ class TaskItem extends React.Component {
       this.props.deselectTask(task);
       this.props.removeTaskFormId();
     }
-
-    // On opening a task edit form, all other selected tasks should be deselected
-    // if (this.props.selectedTaskIds.includes(this.props.task.id) && this.props.closeTaskFormIds.length > 0) {
-    //   this.setState({
-    //     selected: false
-    //   })
-    // }
   }
 
   toggleSelectTask(e, selectedTask, toggleForm) {
     e.preventDefault();
 
     if (this.state.selected && !this.state.openEditForm) {
-      // Deselect task if only toggling task selection
       if (!toggleForm) {
         this.setState({
           selected: false
         })
         this.props.deselectTask(selectedTask);
       }
-      // Do not change task selection if toggling task edit form
-    } else if (this.state.selected) { // Selected and task form open
+    } else if (this.state.selected) {
       this.setState({
         selected: false
       })

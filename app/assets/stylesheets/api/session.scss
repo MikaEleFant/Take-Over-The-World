@@ -108,8 +108,7 @@
 }
 
 .login-input,
-.session-submit,
-.session-demo-submit {
+.session-submit {
   width: 400px;
   height: 48px;
   box-sizing: border-box;
@@ -118,8 +117,7 @@
   padding: 10px 12px;
 }
 
-.session-submit,
-.session-demo-submit {
+.session-submit {
   background-color: rgb(231, 137, 235);
   color: #fff;
   border-color: transparent;
@@ -138,14 +136,8 @@
   margin-bottom: 10px;
 }
 
-.login-demo-form-box {
-  margin: 0 auto;
-  height: 48px;
-}
-
 .signup-link,
 .login-link,
-.session-submit,
-.session-demo-submit {
+.session-submit {
   cursor: pointer;
 }
