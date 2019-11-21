@@ -9,7 +9,7 @@
 
 // Left Side
 .authentication-left {
-  background-color: #F2AB1C;
+  background-color: blueviolet;
   color: white;
   width: 50%;
   display: flex;
@@ -37,7 +37,7 @@
 }
 
 .quote-author {
-  font-family: MuseoSansRounded, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   opacity: .75;
   padding-left: 4px;
@@ -56,7 +56,7 @@
 }
 
 .login-form > ul > li {
-  background: #FEE4DD;
+  background: rgb(233, 111, 77);
   border-radius: 5px;
   font-size: 16px;
   line-height: 21px;
@@ -72,7 +72,7 @@
   font-size: 15px;
   padding: 5px 11px 4px;
   font-weight: 700;
-  font-family: MuseoSansRounded, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 96, 191, 0.1);
   line-height: 1.42857143;
@@ -90,7 +90,7 @@
   display: flex;
   flex-direction: column;
   padding: 126px 10px 0;
-  margin: 0 auto; //Technically will have to make it a bit more aligned to the left
+  margin: 0 auto;
 }
 
 .login-form > h3 {
@@ -98,16 +98,15 @@
   color: #000;
   margin-bottom: 28px;
   margin-top: 20px;
-  font-weight: 500; //Applied for all headers
-  line-height: 1.1; //Applied for all headers
-  font-family: MuseoSansRounded, "Helvetica Neue", Helvetica, Arial, sans-serif; //Applied for all headers
+  font-weight: 500;
+  line-height: 1.1;
+  font-family: 'Times New Roman', Times, serif
 }
 
 .login-form > label {
   margin: 0 auto;
 }
 
-// textbox
 .login-input,
 .session-submit,
 .session-demo-submit {
@@ -121,7 +120,7 @@
 
 .session-submit,
 .session-demo-submit {
-  background-color: #F2DE02;
+  background-color: rgb(231, 137, 235);
   color: #fff;
   border-color: transparent;
   text-align: center;

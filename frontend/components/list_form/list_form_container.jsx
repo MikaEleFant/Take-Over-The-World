@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
 import { createList, updateList, removeErrors } from '../../actions/list_actions';
 import ListForm from './list_form';
 import { closeModal } from '../../actions/modal_actions';

@@ -12,13 +12,17 @@ const Session = () => (
 
       <div className="quote-logo-container">
         <p className="quote">
-          “You have brains in your head.
-          You have feet in your shoes.
-          You can steer yourself
-          any direction you choose.”
+          "Taking over the world is not an easy task.
+          That's why we need to carefully plan each move.
+          This is where we begin.
+          A to-do list of everything needed to take over the world.
+          And also cats. Specifically kittens.
+          And perhaps teacup pigs. With some memes.
+          Uh...............
+          On second thought, just the cats."
         </p>
         <p className="quote-author">
-          - Dr. Seuss, Oh, The Places You'll Go!
+          - Chang, Future Ruler of the World Via Cat Takeovers and Meme Domination
         </p>
       </div>
     </div>

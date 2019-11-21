@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { removeErrors } from '../../actions/session_actions.js';
 
 class SessionForm extends React.Component {
 
@@ -12,13 +11,6 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSubmitDemo = this.handleSubmitDemo.bind(this);
-  }
-
-  handleSubmitDemo(e) {
-    e.preventDefault();
-    const demoUser = {username: "guest", password: "guest_password"};
-    this.props.demoLogin(demoUser);
   }
 
   handleSubmit(e) {
@@ -65,10 +57,6 @@ class SessionForm extends React.Component {
               />
             </label>
             <input className="session-submit" type="submit" value={this.props.formType} />
-
-            <div onClick={this.handleSubmitDemo} className="login-demo-form-box">
-              <input className="session-demo-submit" type="submit" value="Demo Login" />
-            </div>
 
           </div>
         </form>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import ListSidebarContainer from '../dropdown/list_sidebar_container';
 import ListShowContainer from '../list_show/list_show_container';
 import { Route } from 'react-router-dom';

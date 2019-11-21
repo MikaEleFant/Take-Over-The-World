@@ -1561,9 +1561,9 @@ var Session = function Session() {
     className: "quote-logo-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "quote"
-  }, "\u201CYou have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.\u201D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "\u201CTaking over the world is not an easy task. That's why we need to carefully plan each move. This is where we begin. A to-do list of everything needed to take over the world. And also cats. Specifically kittens. And perhaps teacup pigs. With some memes. Uh............... On second thought, just the cats.\u201D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "quote-author"
-  }, "- Dr. Seuss, Oh, The Places You'll Go!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "- Chang, Future Ruler of the World Via Cat Takeovers and Meme Domination"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "authentication-right"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["AuthRoute"], {
     exact: true,
@@ -1614,9 +1614,6 @@ var mapStateToProps = function mapStateToProps(_ref) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
-      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
-    },
-    demoLogin: function demoLogin(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
     },
     clearErrors: function clearErrors() {
@@ -1682,21 +1679,11 @@ function (_React$Component) {
       password: ""
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleSubmitDemo = _this.handleSubmitDemo.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
   _createClass(SessionForm, [{
-    key: "handleSubmitDemo",
-    value: function handleSubmitDemo(e) {
-      e.preventDefault();
-      var demoUser = {
-        username: "guest",
-        password: "guest_password"
-      };
-      this.props.demoLogin(demoUser);
-    }
-  }, {
+
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
@@ -1743,14 +1730,7 @@ function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        onClick: this.handleSubmitDemo,
-        className: "login-demo-form-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "session-demo-submit",
-        type: "submit",
-        value: "Demo Login"
-      })))));
+      }))));
     }
   }, {
     key: "renderErrors",
@@ -1807,9 +1787,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     processForm: function processForm(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["signup"])(user));
-    },
-    demoLogin: function demoLogin(user) {
-      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
     },
     clearErrors: function clearErrors() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["removeErrors"])());

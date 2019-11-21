@@ -26,14 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
     store.subscribe(() => saveToLocalStorage(store.getState()));
   }
 
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // window.login = login;
-  // window.logout = logout;
-  // window.signup = signup;
-  //
-  // window.createList = createList;
-  // window.removeList = removeList;
-
   ReactDOM.render(<Root store={store}/>, root);
 })

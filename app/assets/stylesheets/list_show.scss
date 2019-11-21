@@ -8,7 +8,7 @@
   margin-left: 30px;
 }
 
-.list-title { //Title should be in a different component later
+.list-title {
   position: relative;
   top: 20px;
   left: 25px;
@@ -140,7 +140,7 @@
 .add-task-submit {
   border-radius: 3px;
   height: 32px;
-  background-color: #EEC253;
+  background-color: rgb(211, 100, 168);
   width: 70px;
   padding: 0 14px;
   font-size: .875rem;
