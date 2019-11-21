@@ -1,0 +1,71 @@
+.main-nav {
+  height: 40px;
+  background-color: #F2AB1C;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav i {
+	font-size: 24px;
+  color: #F7E691;
+}
+
+.main-nav i:hover {
+  cursor: pointer;
+}
+
+.right-nav ul {
+  display: flex;
+  width: 140px;
+  justify-content: space-around;
+}
+
+.right-nav ul li {
+  width: 25px;
+  line-height: 52px;
+}
+
+.github-logo,
+.linkedin-logo {
+  display: inline;
+  cursor: pointer;
+}
+
+.github-logo:hover,
+.linkedin-logo:hover,
+.gear-icon:hover,
+.menu-icon:hover {
+  box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.left-nav {
+  margin: 5px 60px 5px 11px;
+}
+
+.settings {
+  position: absolute;
+  z-index: 7;
+  width: 50px;
+  height: 16px;
+  background-color: white;
+  right: 5px;
+  padding: 6px;
+  font-size: .8125rem;
+  border-radius: 3px;
+  top: 40px;
+}
+
+.settings ul {
+  display: inline;
+}
+
+.logout-button {
+  cursor: pointer;
+}
+
+.main-content {
+  background-color: #FBF4D0;
+  display: flex;
+  flex-direction: row;
+  padding-top: 12px;
+}

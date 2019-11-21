@@ -1,0 +1,152 @@
+// Place all the styles related to the api/session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.authentication {
+  display: flex;
+  flex-direction: row;
+}
+
+// Left Side
+.authentication-left {
+  background-color: #F2AB1C;
+  color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+.quote-logo-container {
+  margin-left: 156.5px;
+  width: 420px;
+}
+
+.quote {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 400px;
+  opacity: 0.9;
+  margin-top: 175px;
+}
+
+.quote-author {
+  font-family: MuseoSansRounded, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  opacity: .75;
+  padding-left: 4px;
+}
+
+
+// Right Side
+.authentication-right {
+  width: 50%;
+}
+
+.login-form-box {
+  display: flex;
+  flex-direction: column;
+  height: 974px;
+}
+
+.login-form > ul > li {
+  background: #FEE4DD;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 13px 20px 15px 44px;
+  margin-bottom: 10px;
+}
+
+//Signup for free
+.signup-link,
+.login-link {
+  margin: 43px 12px 0 0;
+  margin-left: auto;
+  font-size: 15px;
+  padding: 5px 11px 4px;
+  font-weight: 700;
+  font-family: MuseoSansRounded, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 96, 191, 0.1);
+  line-height: 1.42857143;
+  border-radius: 3px;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  margin-left: 52px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 126px 10px 0;
+  margin: 0 auto; //Technically will have to make it a bit more aligned to the left
+}
+
+.login-form > h3 {
+  font-size: 21px;
+  color: #000;
+  margin-bottom: 28px;
+  margin-top: 20px;
+  font-weight: 500; //Applied for all headers
+  line-height: 1.1; //Applied for all headers
+  font-family: MuseoSansRounded, "Helvetica Neue", Helvetica, Arial, sans-serif; //Applied for all headers
+}
+
+.login-form > label {
+  margin: 0 auto;
+}
+
+// textbox
+.login-input,
+.session-submit,
+.session-demo-submit {
+  width: 400px;
+  height: 48px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border-radius: 3px;
+  padding: 10px 12px;
+}
+
+.session-submit,
+.session-demo-submit {
+  background-color: #F2DE02;
+  color: #fff;
+  border-color: transparent;
+  text-align: center;
+  height: 46px;
+}
+
+.login-input {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.session-submit {
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.login-demo-form-box {
+  margin: 0 auto;
+  height: 48px;
+}
+
+.signup-link,
+.login-link,
+.session-submit,
+.session-demo-submit {
+  cursor: pointer;
+}

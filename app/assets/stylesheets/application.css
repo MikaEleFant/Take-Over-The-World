@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body, header, nav, h1, h3, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
+   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+
+ html, body, main, div, form {
+   height: 100%;
+ }
+
+ body {
+   -webkit-font-smoothing: antialiased;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }

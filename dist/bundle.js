@@ -168,9 +168,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _session_signup_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./session/signup_form_container */ "./frontend/components/session/signup_form_container.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './session/login_form_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _session_signin_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session/signin_form_container */ "./frontend/components/session/signin_form_container.js");
+/* harmony import */ var _session_signin_form_container__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_session_signin_form_container__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../util/route_util */ "./frontend/util/route_util.jsx");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './session/splash_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './splash/splash_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 
@@ -181,16 +182,18 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["AuthRoute"], {
     exact: true,
-    path: "/",
-    component: !(function webpackMissingModule() { var e = new Error("Cannot find module './session/splash_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["AuthRoute"], {
-    exact: true,
-    path: "/login",
-    component: !(function webpackMissingModule() { var e = new Error("Cannot find module './session/login_form_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    path: "/signin",
+    component: _session_signin_form_container__WEBPACK_IMPORTED_MODULE_3___default.a
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["AuthRoute"], {
     exact: true,
     path: "/signup",
     component: _session_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["AuthRoute"], {
+    exact: true,
+    path: "/",
+    component: !(function webpackMissingModule() { var e = new Error("Cannot find module './splash/splash_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+    to: "/"
   })));
 };
 
@@ -225,6 +228,17 @@ var Root = function Root(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Root);
+
+/***/ }),
+
+/***/ "./frontend/components/session/signin_form_container.js":
+/*!**************************************************************!*\
+  !*** ./frontend/components/session/signin_form_container.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\frontend\\components\\session\\signin_form_container.js: Unexpected token, expected \",\" (2:16)\n\n\u001b[0m \u001b[90m 1 | \u001b[39m\u001b[36mimport\u001b[39m { connect } from \u001b[32m'react-redux'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m { signin receiveSessionErrors } from \u001b[32m'./../../actions/session_actions'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mSigninForm\u001b[39m from \u001b[32m'./signin_form'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[36mconst\u001b[39m mapStateToProps \u001b[33m=\u001b[39m (state\u001b[33m,\u001b[39m ownProps) \u001b[33m=>\u001b[39m {\u001b[0m\n    at Object.raise (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:6930:17)\n    at Object.unexpected (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:8323:16)\n    at Object.expect (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:8309:28)\n    at Object.parseNamedImportSpecifiers (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:12004:14)\n    at Object.parseImport (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:11947:39)\n    at Object.parseStatementContent (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:10709:27)\n    at Object.parseStatement (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:10611:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:11187:25)\n    at Object.parseBlockBody (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:11174:10)\n    at Object.parseTopLevel (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:10542:10)\n    at Object.parse (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:12051:10)\n    at parse (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\parser\\lib\\index.js:12102:38)\n    at parser (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:168:34)\n    at normalizeFile (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:102:11)\n    at runSync (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\core\\lib\\transformation\\index.js:44:43)\n    at runAsync (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\core\\lib\\transformation\\index.js:35:14)\n    at process.nextTick (C:\\Users\\chang\\Desktop\\Full Stack Project\\TakeOverTheWorld\\node_modules\\@babel\\core\\lib\\transform.js:34:34)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
 
 /***/ }),
 
@@ -414,6 +428,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -425,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.currentUser) {
     preloadedState = {
       entities: {
-        users: {}
+        users: _defineProperty({}, window.currentUser.id, window.currentUser)
       },
       session: {
         currentUser: window.currentUser

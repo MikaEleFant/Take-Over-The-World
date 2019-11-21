@@ -1,0 +1,90 @@
+.list-form-box {
+  width: 314px;
+  height: 151px;
+  background: white;
+  padding: 29px 37px;
+  border: 1px solid #d1d1d1;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  position: relative;
+  max-width: 400px;
+  top: 223px;
+  right: 200.5px;
+}
+
+.list-form-box > .cancel-icon {
+  opacity: .75;
+  position: absolute;
+  top: 21px;
+  right: 25px;
+}
+
+.list-form-box h1 {
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 14px;
+  cursor: default;
+}
+
+.list-form-box > ul > li {
+  background: #FEE4DD;
+  border-radius: 5px;
+  font-size: .8125rem;
+  padding: 5px 20px 5px 44px;
+}
+
+.list-form-buttons {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  margin-top: 22px;
+  margin-bottom: 7px;
+}
+
+.list-form-buttons > input,
+.list-form-buttons > div {
+  border: 1px solid #c7cacd;
+  padding: 6px 13px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  line-height: 16.7px;
+}
+
+.list-form-buttons > div:hover {
+  color: #F2AB1C;
+}
+
+.list-form-buttons input,
+.list-form-buttons div,
+.cancel-icon {
+  cursor: pointer;
+}
+
+.list-form-buttons input {
+  height: 20px;
+  background-color: #F2AB1C;
+  border: none;
+  margin-right: 8px;
+  color: white;
+}
+
+.list-form-buttons div {
+  height: 18px;
+  background-color: #fbfbfa;
+}
+
+.list-form-box label {
+  font-size: .8125rem;
+  padding: 10px 0px;
+  margin-top: 7px;
+}
+
+.list-form-box label input {
+  cursor: text;
+  border-radius: 3px;
+  border: 1px solid #d0d3d6;
+  width: 300px;
+  margin-top: 5px;
+  padding: 5px 6px;
+}

@@ -1,0 +1,80 @@
+.sidebar {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar img {
+  width: 140px;
+  height: 120px;
+}
+
+.sidebar ul {
+  width: 158px;
+  margin-left: 11px;
+}
+
+.all-lists {
+  width: 100%;
+  padding: 8px;
+  margin-left: 11px;
+}
+
+.all-lists > ul > li {
+  width: 163px;
+  height: 22px;
+  font-size: .8125rem;
+  padding-left: 17px;
+  cursor: pointer;
+}
+
+.all-lists > ul > li:first-of-type {
+  margin-left: 17px;
+  padding-left: 0;
+  width: 180px;
+}
+
+.all-lists > ul > li:hover {
+  background-color: #F6E584;
+}
+
+
+.sidebar ul li:first-of-type {
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  line-height: 19px;
+}
+
+.add-box-icon,
+.lists-options-icon {
+  line-height: 18px;
+}
+
+.lists-options-icon {
+  color: transparent; //Change later after adding functionality
+  margin-left: 89.6px;
+}
+
+.list-options-icon {
+  float: right;
+  margin-right: 8px;
+}
+
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-17 { font-size: 17px; }
+
+.list-options > ul {
+  background-color: white;
+  border-radius: 3px;
+  width: 120px;
+  position: relative;
+  padding: 4px 0;
+  z-index: 3;
+}
+
+.list-options > ul > li {
+  width: 98px;
+  padding: 3px 12px;
+}
