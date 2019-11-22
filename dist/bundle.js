@@ -421,9 +421,9 @@ var deleteTask = function deleteTask(list_id, task) {
 
 /***/ }),
 
-/***/ "./frontend/components/App.jsx":
+/***/ "./frontend/components/app.jsx":
 /*!*************************************!*\
-  !*** ./frontend/components/App.jsx ***!
+  !*** ./frontend/components/app.jsx ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -436,6 +436,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_session__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./session/session */ "./frontend/components/session/session.jsx");
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 /* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
+/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+
 
 
 
@@ -445,11 +447,11 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "app"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["AuthRoute"], {
     exact: true,
     path: "/login",
     component: _session_session__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["AuthRoute"], {
     exact: true,
     path: "/signup",
     component: _session_session__WEBPACK_IMPORTED_MODULE_2__["default"]
@@ -1506,7 +1508,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./frontend/components/App.jsx");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app */ "./frontend/components/app.jsx");
 
 
 
@@ -1516,7 +1518,7 @@ var Root = function Root(_ref) {
   var store = _ref.store;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
     store: store
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Root);
@@ -2005,25 +2007,16 @@ function (_React$Component) {
     value: function componentDidUpdate(prevProps) {
       var closeTaskFormIds = this.props.closeTaskFormIds;
       var openEditForm = this.state.openEditForm;
-      var task = this.props.task; // Case 1:  Current task is the task with open form
-      // selected should be true
-      // openEditForm should be true
+      var task = this.props.task;
 
       if (closeTaskFormIds[0] === task.id && closeTaskFormIds.length > 1) {
-        // Deselect task and close edit form
         this.setState({
           selected: false,
           openEditForm: false
         });
         this.props.deselectTask(task);
         this.props.removeTaskFormId();
-      } // On opening a task edit form, all other selected tasks should be deselected
-      // if (this.props.selectedTaskIds.includes(this.props.task.id) && this.props.closeTaskFormIds.length > 0) {
-      //   this.setState({
-      //     selected: false
-      //   })
-      // }
-
+      }
     }
   }, {
     key: "toggleSelectTask",
@@ -2031,16 +2024,13 @@ function (_React$Component) {
       e.preventDefault();
 
       if (this.state.selected && !this.state.openEditForm) {
-        // Deselect task if only toggling task selection
         if (!toggleForm) {
           this.setState({
             selected: false
           });
           this.props.deselectTask(selectedTask);
-        } // Do not change task selection if toggling task edit form
-
+        }
       } else if (this.state.selected) {
-        // Selected and task form open
         this.setState({
           selected: false
         });
@@ -2377,23 +2367,30 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+
+var SessionErrorsReducer = function SessionErrorsReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
+      debugger;
+      console.log('session errors reducer');
       return action.errors;
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
+      return [];
+
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_SESSION_ERRORS"]:
       return [];
 
     default:
       return state;
   }
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SessionErrorsReducer);
 
 /***/ }),
 
