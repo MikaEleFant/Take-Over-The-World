@@ -10,44 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_212608) do
+ActiveRecord::Schema.define(version: 2018_11_21_144213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "assignments", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "task_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "lists", force: :cascade do |t|
     t.string "title", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "title"], name: "index_lists_on_user_id_and_title", unique: true
     t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "priority", default: 4, null: false
-    t.date "due_date"
-    t.boolean "completed", default: false, null: false
-    t.integer "user_id", null: false
+    t.boolean "complete", null: false
     t.integer "list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["list_id"], name: "index_tasks_on_list_id"
-    t.index ["user_id"], name: "index_tasks_on_user_id"
-  end
-
-  create_table "teams", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "list_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,8 +39,8 @@ ActiveRecord::Schema.define(version: 2019_11_21_212608) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["session_token"], name: "index_users_on_session_token"
-    t.index ["username"], name: "index_users_on_username"
+    t.index ["session_token"], name: "index_users_on_session_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
