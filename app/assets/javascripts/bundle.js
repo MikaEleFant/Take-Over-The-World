@@ -575,8 +575,12 @@ function (_React$Component) {
   }, {
     key: "handleDeleteList",
     value: function handleDeleteList(e, list_user_id, list_id) {
+      var _this2 = this;
+
       e.preventDefault();
-      this.props.deleteList(list_user_id, list_id);
+      this.props.deleteList(list_user_id, list_id).then(function () {
+        _this2.props.history.push('/');
+      });
     }
   }, {
     key: "handleShowList",
@@ -588,7 +592,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var lists = this.props.lists;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -601,34 +605,34 @@ function (_React$Component) {
         className: "material-icons md-12 lists-options-icon"
       }, "arrow_drop_down_circle"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         onClick: function onClick() {
-          return _this2.props.openModal('Add');
+          return _this3.props.openModal('Add');
         },
         className: "material-icons md-14 add-box-icon"
       }, "add_box")), this.props.lists.map(function (list) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           onClick: function onClick(e) {
-            return _this2.handleShowList(e, list.id);
+            return _this3.handleShowList(e, list.id);
           },
           key: list.id
         }, list.title, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           onClick: function onClick() {
-            return _this2.toggleListOptions(list.id);
+            return _this3.toggleListOptions(list.id);
           },
           className: "material-icons md-14 list-options-icon"
-        }, "arrow_drop_down_circle"), _this2.state.showListOptions === list.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, "arrow_drop_down_circle"), _this3.state.showListOptions === list.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "list-options",
           ref: function ref(node) {
-            return _this2.node = node;
+            return _this3.node = node;
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           onClick: function onClick() {
-            return _this2.props.openModal('Save', {
+            return _this3.props.openModal('Save', {
               selectedListId: list.id
             });
           }
         }, "Rename list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           onClick: function onClick(e) {
-            return _this2.handleDeleteList(e, list.user_id, list.id);
+            return _this3.handleDeleteList(e, list.user_id, list.id);
           }
         }, "Remove list"))) : null);
       }))), this.state.showListForm ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_list_form_list_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], null) : null);
@@ -2210,6 +2214,8 @@ __webpack_require__.r(__webpack_exports__);
       return action.errors;
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_CURRENT_USER"]:
+      return [];
+
     case _actions_list_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_LIST_ERRORS"]:
       return [];
 

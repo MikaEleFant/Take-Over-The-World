@@ -61,7 +61,9 @@ class ListSidebar extends React.Component {
 
   handleDeleteList(e, list_user_id, list_id) {
     e.preventDefault();
-    this.props.deleteList(list_user_id, list_id)
+    this.props.deleteList(list_user_id, list_id).then(() => {
+      this.props.history.push('/');
+    })
   }
 
   handleShowList(e, list_id) {

@@ -10,6 +10,7 @@ export default (state = [], action) => {
     case RECEIVE_LIST_ERRORS:
       return action.errors;
     case RECEIVE_CURRENT_USER:
+      return [];
     case REMOVE_LIST_ERRORS:
       return [];
     default:
