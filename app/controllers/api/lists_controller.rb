@@ -10,6 +10,8 @@ class Api::ListsController < ApplicationController
     else
       render json: @list.errors.full_messages, status: 422
     end
+  rescue
+    render json: ['internal server error'], status: 422
   end
 
   def index

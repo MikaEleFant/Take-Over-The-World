@@ -39,9 +39,9 @@ export const removeErrors = () => ({
 export const createList = (user_id, list) => dispatch => (
   APIUtil.createList(user_id, list).then(list => (
     dispatch(receiveList(list))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
-  ))
+  ), err => {
+    return dispatch(receiveErrors(err.responseJSON));
+  })
 );
 
 export const updateList = (user_id, list) => dispatch => {
